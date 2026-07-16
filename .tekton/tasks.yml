@@ -4,7 +4,7 @@ metadata:
   name: cleanup
 spec:
   steps:
-    - name: cleanup
+    - name: cleanup-workspace
       image: alpine:3.18
       script: |
         #!/bin/sh
@@ -19,7 +19,7 @@ spec:
   workspaces:
     - name: source
   steps:
-    - name: test
+    - name: run-tests
       image: python:3.11
       workingDir: /workspace/source
       script: |
